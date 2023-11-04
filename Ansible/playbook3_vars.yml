@@ -8,7 +8,6 @@
     - name: playbook variable
       set_fact:
         playbook_var: "This is from playbook var"
-
     - name: print playbook_var
       debug:
         var: playbook_var
