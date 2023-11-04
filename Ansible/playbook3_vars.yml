@@ -12,3 +12,6 @@
     - name: print playbook_var
       debug:
         var: playbook_var
+    - name: print all collected ansible facts
+      debug:
+        var: ansible_facts
