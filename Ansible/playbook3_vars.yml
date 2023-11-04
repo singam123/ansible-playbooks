@@ -16,4 +16,8 @@
       debug:
         var: ansible_facts
     - debug:
-        var: ansible_facts['os_family']
+        msg: "this belongs to {{ansible_facts['os_family']}} OS family"
+      when: ansible_facts['os_family'] == 'Debian'
+    - debug:
+        msg: "this belongs to RHEL OS family"
+      when: ansible_facts['os_family'] == 'RHEL'
