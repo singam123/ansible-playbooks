@@ -21,6 +21,7 @@
     - debug: 
         msg: "This is for failed_when"
       failed_when: ansible_facts['os_family'] == 'Debian'
+      ignore_errors: true
 
     - name: this task gets skipped
       debug:
