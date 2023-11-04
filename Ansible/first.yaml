@@ -1,0 +1,6 @@
+--- 
+ hosts: localhost
+ tasks:
+   file:
+     path: /tmp/nixon
+     state: touch
