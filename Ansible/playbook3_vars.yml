@@ -11,12 +11,12 @@
     - name: print playbook_var
       debug:
         var: playbook_var
-    - name: print all collected ansible facts
-      debug:
-        var: ansible_facts
     - debug:
-        msg: "this belongs to {{ansible_facts['os_family']}} OS family"
+        msg: "this belongs to {{ansible_facts['os_family']}} OS family and this is from when condition"
       when: ansible_facts['os_family'] == 'Debian'
     - debug:
-        msg: "this belongs to RHEL OS family"
-      when: ansible_facts['os_family'] == 'RHEL'
+        msg: "this is for changed_when"
+      changed_when: ansible_facts['os_family'] != 'RHEL'
+    - debug: 
+        msg: "This is for failed_when"
+      failed_when: ansible_facts['os_family'] == 'Debian'
