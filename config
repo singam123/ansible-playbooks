@@ -1,0 +1,33 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJUVZRcm5TNmp1eXd3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpFeE1EUXdNakF5TkRaYUZ3MHpNekV4TURFd01qQTNORFphTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM2cmdVWTU2MDBvMFdvcHhmT0E3aFZ4RVlyU0ZaN2dpdWRaTjQzUmtQaXM2cmJKSGpjbFJldDZ0RXcKaFM3Z3k0TmR3aHNxSUprcFRpTmxjVDd2aDJPWTVhdWl4RFgvL040aFJ2b0YxMDY5RTQ0MnRsNWQxdFhzVlpBQgpxNWxBMGJ3WmZrR0lLM1REN29RTHlxTVR3cHU4bWRwaFpSaHFuclpMTGovWmNTdFhtNE5URlBjYlNkWEduMytLCjNZNWxDN1VxMzJZQ0dsak5oTnJ3ejlKT1hKRDljdnViYkJGTU1HQWNQcjJLY3BzUHQ2MkRqS21HYURtL2pBalMKaVhVZWlPSkxKQVdoZENuVjVCL215NWlJTStPY1Q2OHdzdDBVS3dmQkNXd285dW5aYU5Cc1RMd05TUjByaVVmbgpZVi9xemJkWm92SDg5WVFCalhZaU1VV04vdGlOQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJUUmMwNnZhVi9BLzhqb3B0aDNudVp4TXZNanZ6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQWdoOEpydnZyUApjMDdPeVhpbDNyMTB4bDZ1S2htazVRYnBWdXB4RUVqblhYS3RnNDVoWGRBUUFick9OOStsTXV0YXF3b09Kb3VOClpaSFllVlk4ME5CSTU4V2l0RmswVEM0OFJpcjk3MkNxQTRMWmJtcDVWaTVaYlkxaDZwcVMvczV0VS8vQ1MxVkgKOTBHYk9oZGJnaEM0eHE2SWl0eGdMcG5aS29QL09sMUtucFZ5eE5vU040ZjVtLzhCZVVYR29kT2l6WkpRajZpYwpMNFB3WWJDYy9WVTl0Zk9DSDhDSWtnbWQ2Y2V2SXR3WlJkVmpFWEZQalVjWFlnQzBGSWY0TkhRRXR2U0h5N2EzCnVYSDYrS21CVkhlUWZvWGs4WjFkUE1qKzh1a3Rma3NqMmJtL29kYkhkdXBtbUZGeDlydzF5U2FEQkZFa01oVUcKTjEycDRWRzg5eGZPCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://305B60516923A3D71EA32B8F86FFE195.gr7.us-east-1.eks.amazonaws.com
+  name: ekscluster.us-east-1.eksctl.io
+contexts:
+- context:
+    cluster: ekscluster.us-east-1.eksctl.io
+    user: Singam@ekscluster.us-east-1.eksctl.io
+  name: Singam@ekscluster.us-east-1.eksctl.io
+current-context: Singam@ekscluster.us-east-1.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: Singam@ekscluster.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --output
+      - json
+      - --cluster-name
+      - ekscluster
+      - --region
+      - us-east-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
