@@ -1,0 +1,6 @@
+---
+- name: new playbook
+  hosts: localhost
+  tasks:
+    - debug:
+        var: myappname 
