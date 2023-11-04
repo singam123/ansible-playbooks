@@ -11,6 +11,7 @@
     - name: print playbook_var
       debug:
         var: playbook_var
+    - shell: date
     - debug:
         msg: "this belongs to {{ansible_facts['os_family']}} OS family and this is from when condition"
       when: ansible_facts['os_family'] == 'Debian'
