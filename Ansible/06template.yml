@@ -4,9 +4,14 @@
   tasks:
     - name: set template variables
       set_fact:
-        name: "Tita"
+        name: "Singam"
     
     - name: create template
       template:
         src: templates/mytemplate.j2
         dest: ../../myconfig
+    
+    - name: change mode 
+      file:
+        path: ../../myconfig
+        mode: '0777'
