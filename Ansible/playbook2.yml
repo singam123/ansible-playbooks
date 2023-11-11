@@ -4,5 +4,5 @@
   tasks:
     - name: create a file
       file:
-        path: /tmp/singam
+        path: /tmp/tita
         state: touch
