@@ -1,6 +1,7 @@
---- 
+---
  hosts: localhost
- tasks:
-   file:
-     path: /tmp/nixon
-     state: touch
+ task:
+   - name: Creating new file
+     file:
+       path: /tmp/vitalis
+       state: touch
