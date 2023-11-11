@@ -1,7 +1,8 @@
 ---
- hosts: localhost
- task:
-   - name: Creating new file
-     file:
-       path: /tmp/vitalis
-       state: touch
+- name: new playbook
+  hosts: localhost
+  tasks:
+    - name: create a file
+      file:
+        path: /tmp/singam
+        state: touch
