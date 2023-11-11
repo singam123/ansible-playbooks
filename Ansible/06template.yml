@@ -1,0 +1,12 @@
+---
+- name: new playbook
+  hosts: localhost
+  tasks:
+    - name: set template variables
+      set_fact:
+        name: "Singam"
+    
+    - name: create template
+      template:
+        src: templates/mytemplate.j2
+        dest: ../../myconfig
