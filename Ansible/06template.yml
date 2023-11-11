@@ -4,7 +4,7 @@
   tasks:
     - name: set template variables
       set_fact:
-        name: "Singam"
+        name: "Tita"
     
     - name: create template
       template:
