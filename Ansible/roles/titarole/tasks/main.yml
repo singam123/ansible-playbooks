@@ -1,2 +1,12 @@
 ---
 # tasks file for titarole
+- name: set template variables
+  set_fact:
+    name: "Tita this is from role"
+  notify: change mode
+
+- name: create template
+  template:
+    src: templates/mytemplate.j2
+    dest: ../../myconfig
+  notify: change mode
