@@ -1,0 +1,5 @@
+---
+- name: new playbook
+  hosts: localhost
+  roles:
+    - role: 'roles/titarole'
