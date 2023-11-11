@@ -1,0 +1,12 @@
+---
+- name: new playbook
+  hosts: localhost
+  tasks:
+    - name: create a file
+      file:
+        path: "{{item.path}}" #/tmp/singam_new
+        mode: "{{item.mode}}"
+        state: touch
+      with_items:
+        - {'path': /tmp/singam_new, 'mode': '0777'}
+        - {'path': /tmp/tita_new, 'mode': '0755'}
