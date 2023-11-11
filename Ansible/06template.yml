@@ -12,6 +12,7 @@
         dest: ../../myconfig
       notify: change mode
       
+  handlers:
     - name: change mode 
       file:
         path: ../../myconfig
