@@ -10,7 +10,8 @@
       template:
         src: templates/mytemplate.j2
         dest: ../../myconfig
-    
+      notify: change mode
+      
     - name: change mode 
       file:
         path: ../../myconfig
