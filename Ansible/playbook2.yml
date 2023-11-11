@@ -1,0 +1,8 @@
+---
+- name: new playbook
+  hosts: localhost
+  tasks:
+    - name: create a file
+      file:
+        path: /tmp/singam
+        state: touch
