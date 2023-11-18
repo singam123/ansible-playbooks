@@ -2,5 +2,5 @@
 # handlers file for titarole
 - name: change mode 
   file:
-    path: ../../myconfig
+    path: /tmp/myconfig
     mode: '0777'
