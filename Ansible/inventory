@@ -1,0 +1,7 @@
+#[frontend]
+#localhost
+#[frontend:vars]
+#myappname=ansibleapp
+#ansile_connection=local
+
+localhost myappname=localapp ansible_connection=local

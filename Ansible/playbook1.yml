@@ -1,0 +1,7 @@
+- name: create a file
+  hosts: localhost
+  task:
+    - name: Creating new file
+      file:
+        path: /tmp/vitalis
+        state: touch
