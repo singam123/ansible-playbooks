@@ -2,6 +2,8 @@
 - name: new playbook
   hosts: all
   tasks:
+    - fail: 
+        msg: "Failed by user"
     - name: create a file
       file:
         path: "{{item.path}}" #/tmp/singam_new
@@ -10,3 +12,5 @@
       with_items:
         - {'path': /tmp/singam_new, 'mode': '0777'}
         - {'path': /tmp/tita_new, 'mode': '0755'}
+
+    
