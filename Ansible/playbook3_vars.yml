@@ -7,7 +7,7 @@
         var: myappname 
     - name: playbook variable
       set_fact:
-        playbook_var: "I have edited this in ansible server"
+        playbook_var: "I have edited this in my Github"
     - name: print playbook_var
       debug:
         var: playbook_var
