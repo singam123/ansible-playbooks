@@ -8,5 +8,5 @@
 - name: create template
   template:
     src: ../templates/mytemplate.j2
-    dest: ../../myconfig
+    dest: /tmp/myconfig
   notify: change mode
