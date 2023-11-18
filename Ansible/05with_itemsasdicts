@@ -1,6 +1,6 @@
 ---
 - name: new playbook
-  hosts: localhost
+  hosts: all
   tasks:
     - name: create a file
       file:
